@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Memory Game</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <script src="/assets/game.js" defer></script>
+  <!-- defer is used to ensure the execution of the script only after the document has been parsed -->
+</head>
+<body>
+  <div class="game-container">
+    <h1>Memory Game</h1>
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="reset">Reset</button>
+      <div class="stats">
+        <div class="moves">0 moves</div>
+        <div class="timer">time: 0 sec</div>
+      </div>
+    </div>
+
+    <div class="board-container">
+      <!--
+        data-* is used to store custom data 
+        data-dimension is used to configure the size of the game board; by default will be 4x4, but it can match various dimensions
+      -->
+      <div class="board" data-dimension="4">
+        <div class="card">
+          <div class="card-front"></div>
+          <div class="card-back"></div>
+        </div>
+      </div>
+      <div class="win">You won!</div>
+    </div>
+  </div>
+</body>
+</html>
